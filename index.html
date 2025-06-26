@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAHORD - Portfolio</title>
+    <link rel="shortcut icon" href="./logo.png">
+    <!-- Chargement de Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chargement de Font Awesome pour les icônes de réseaux sociaux -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="antialiased">
+
+    <!-- Section d'en-tête (Header) -->
+    <header class="bg-gray-800 bg-opacity-70 backdrop-blur-sm fixed w-full z-50 shadow-lg rounded-b-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo ou Nom du Portfolio -->
+            <a href="#" class="flex items-center text-3xl font-extrabold gradient-text rounded-md px-2 py-1">
+                <img src="./logo.png" alt="Logo DAHORD" class="h-10 w-auto rounded-full mr-3">
+                DAHORD
+            </a>
+            <!-- Menu de navigation pour grand écran -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#accueil" class="nav-txt-grad px-3 py-2 rounded-md"><b>Accueil</b></a>
+                <a href="#projets" class="nav-txt-grad px-3 py-2 rounded-md"><b>Projets</b></a>
+                <a href="#a-propos" class="nav-txt-grad px-3 py-2 rounded-md"><b>À Propos</b></a>
+                <a href="#contact" class="nav-txt-grad px-3 py-2 rounded-md"><b>Contact</b></a>
+            </div>
+            <!-- Bouton pour le menu mobile (Hamburger) -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none focus:text-white">
+                    <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Menu mobile déroulant -->
+        <div id="mobile-menu" class="hidden md:hidden bg-space-x-8 py-4 rounded-b-lg">
+            <a href="#accueil" class="block text-gray-300 hover:text-white py-2 px-6 transition-colors duration-300"><b>Accueil</b></a>
+            <a href="#projets" class="block text-gray-300 hover:text-white py-2 px-6 transition-colors duration-300"><b>Projets</b></a>
+            <a href="#a-propos" class="block text-gray-300 hover:text-white py-2 px-6 transition-colors duration-300"><b>À Propos</b></a>
+            <a href="#contact" class="block text-gray-300 hover:text-white py-2 px-6 transition-colors duration-300"><b>Contact</b></a>
+        </div>
+    </header>
+
+    <!-- Section d'Accueil (Hero Section) -->
+    <section id="accueil" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden bg-cover bg-center" style="background: repeating-linear-gradient(45deg, #1A202C, #1A202C 10px, #2D3748 10px, #2D3748 20px);">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900 opacity-70"></div>
+        <div class="relative z-10 p-8 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 gradient-text drop-shadow-lg">
+                DAHORD <br> Développeur Junior
+            </h1><br>
+            <p class="text-lg md:text-2xl text-gray-200 mb-10 leading-relaxed">
+                Certes non professionnel mais passionné par la programmation : la création d'expériences numériques innovantes et performantes. <br><br> Explorez mes projets pour découvrir mes compétences.
+            </p>
+            <a href="#projets" class="btn-gradient text-white font-bold py-4 px-10 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                Voir Mes Projets
+            </a>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="bg-gray-900 py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Mes Projets Réalisés</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Projet 1: Guess the Flag (JavaScript) -->
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-8 transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center">
+                    <i class="fas fa-globe text-6xl gradient-text mb-6"></i>
+                    <h3 class="text-3xl font-semibold text-white mb-4">Guess the Flag</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">Un jeu interactif développé en JavaScript, où les utilisateurs doivent deviner le pays à partir de son drapeau. Démonstration de compétences en manipulation DOM et logique de jeu.</p>
+                    <div class="flex flex-wrap justify-center gap-2 mt-auto">
+                        <span class="bg-blue-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">JavaScript</span>
+                        <span class="bg-purple-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">HTML</span>
+                        <span class="bg-pink-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">CSS</span>
+                    </div>
+                </div>
+
+                <!-- Projet 2: Formulaire PHP -->
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-8 transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center">
+                    <i class="fas fa-file-alt text-6xl gradient-text mb-6"></i>
+                    <h3 class="text-3xl font-semibold text-white mb-4">Formulaire de Contact PHP</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">Un site web présentant un formulaire de contact robuste avec validation côté serveur et envoi d'e-mails, illustrant la maîtrise de PHP pour le traitement des données.</p>
+                    <div class="flex flex-wrap justify-center gap-2 mt-auto">
+                        <span class="bg-blue-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">PHP</span>
+                        <span class="bg-purple-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">HTML</span>
+                        <span class="bg-pink-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">CSS</span>
+                    </div>
+                </div>
+
+                <!-- Projet 3: Site Outils (Horloge, Chrono, Minuteur, Calendrier) -->
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-8 transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center">
+                    <i class="fas fa-tools text-6xl gradient-text mb-6"></i>
+                    <h3 class="text-3xl font-semibold text-white mb-4">Site Outils Utilitaires</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">Un site multifonctionnel intégrant une horloge, un chronomètre, un minuteur et un calendrier, démontrant des compétences en JavaScript pour les fonctionnalités dynamiques.</p>
+                    <div class="flex flex-wrap justify-center gap-2 mt-auto">
+                        <span class="bg-blue-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">JavaScript</span>
+                        <span class="bg-purple-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">HTML</span>
+                        <span class="bg-pink-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">CSS</span>
+                    </div>
+                </div>
+
+                <!-- Projet 4: Extension Web Gestionnaire de Mots de Passe -->
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-8 transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center">
+                    <i class="fas fa-lock text-6xl gradient-text mb-6"></i>
+                    <h3 class="text-3xl font-semibold text-white mb-4">Extension Gestionnaire de Mots de Passe</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">Une extension web pour chrome pour la gestion (cryptage partiel en JS) sécurisée des mots de passe, soulignant l'apprentissage en développement d'extensions, en sécurité des données.</p>
+                    <div class="flex flex-wrap justify-center gap-2 mt-auto">
+                        <span class="bg-blue-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">JavaScript</span>
+                        <span class="bg-purple-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">HTML</span>
+                        <span class="bg-pink-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">CSS</span>
+                    </div>
+                </div>
+
+                <!-- Projet 5: Site Clash Royale (Non Fini) -->
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-8 transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center">
+                    <i class="fas fa-crown text-6xl gradient-text mb-6"></i>
+                    <h3 class="text-3xl font-semibold text-white mb-4">Site sur Clash Royale (WIP)</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">Un projet ambitieux de site communautaire ou d'analyse pour le jeu Clash Royale, très avancé mais toujours en cours de développement. Mise en avant de la persévérance et de l'ambition.</p>
+                    <div class="flex flex-wrap justify-center gap-2 mt-auto">
+                        <span class="bg-blue-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">Web Technologies</span>
+                        <span class="bg-purple-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">API Integration (Potential)</span>
+                    </div>
+                </div>
+
+                <!-- Projet 6: Python Snake & Q-learning AI -->
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-8 transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center">
+                    <i class="fas fa-brain text-6xl gradient-text mb-6"></i>
+                    <h3 class="text-3xl font-semibold text-white mb-4">Snake avec IA (Python Q-learning)</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">Un programme Python recréant le jeu Snake, avec une IA capable d'y jouer de manière autonome grâce à l'algorithme de Q-learning. Démontre des compétences en Python et en apprentissage par renforcement.</p>
+                    <div class="flex flex-wrap justify-center gap-2 mt-auto">
+                        <span class="bg-blue-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">Python</span>
+                        <span class="bg-purple-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">Machine Learning</span>
+                        <span class="bg-pink-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">Q-learning</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section id="a-propos" class="bg-gray-700 py-20 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-10 gradient-text">À Propos de Moi</h2>
+            <div class="max-w-3xl mx-auto text-gray-200 text-lg leading-relaxed">
+                <p class="mb-4">Je suis un lycéen passionné par la programmation, la création. Mon parcours d'étude n'est pas terminé cependant grâce à la grande quantité de documentation disponible sur internet, j'ai aquis quelques compétences, allant du développement web front-end et back-end, 
+                    où j'ai tout de même moins de compétences, à la programmation Python et l'intelligence artificielle, où je ne fais que débuter pour le moment.</p>
+                <p class="mb-4">J'aime relever de nouveaux défis, apprendre continuellement et créer sans cesse des projets, des moins utiles aux plus innovants. Je suis constamment à la recherche d'opportunités tant que pour appliquer mes compétences que les élargir.</p>
+                <p>Mon objectif est de transformer des idées complexes en sites ou applications conviviales et robustes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact et Réseaux Sociaux -->
+    <section id="contact" class="bg-gray-900 py-20 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-10 gradient-text">Me Contacter & Me Suivre</h2>
+            <p class="text-gray-300 text-lg mb-8">N'hésitez pas à me contacter pour toute opportunité ou collaboration !</p>
+
+            <!-- Liens Réseaux Sociaux -->
+            <div class="flex justify-center space-x-8 mb-12">
+                <a href="https://www.youtube.com/@dahordklh" target="_blank" class="social-icon text-gray-400 hover:text-red-600 transition-colors duration-300 text-5xl" aria-label="Chaîne YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.twitch.tv/dahord_08" target="_blank" class="social-icon text-gray-400 hover:text-purple-600 transition-colors duration-300 text-5xl" aria-label="Chaîne Twitch">
+                    <i class="fab fa-twitch"></i>
+                </a>
+                <a href="https://github.com/DAHORD" target="_blank" class="social-icon text-gray-400 hover:text-gray-100 transition-colors duration-300 text-5xl" aria-label="Profil GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.snapchat.com/add/killian.lh08" target="_blank" class="social-icon text-gray-400 hover:text-yellow-300 transition-colors duration-300 text-5xl" aria-label="Profil Snapchat">
+                    <i class="fab fa-snapchat"></i>
+                </a>
+            </div>
+
+            <!-- Formulaire de Contact simplifié -->
+            <div class="max-w-xl mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl">
+                <h3 class="text-2xl font-semibold text-white mb-6">Envoyez-moi un message</h3>
+                <form action="./contact.php" method="POST" class="space-y-4">
+                    <div>
+                        <input type="text" id="name" name="name" placeholder="Votre Nom" class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 text-gray-200 placeholder-gray-400" required>
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Votre Email" class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 text-gray-200 placeholder-gray-400" required>
+                    </div>
+                    <div>
+                        <textarea id="message" name="message" rows="5" placeholder="Votre Message" class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-rose-500 text-gray-200 placeholder-gray-400" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                        Envoyer le Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page (Footer) -->
+    <footer class="bg-gray-800 text-gray-400 py-8 text-center rounded-t-lg">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2025 DAHORD. Tous droits réservés.</p>
+            <p>Codé avec <span class="gradient-text">Passion</span>.</p>
+        </div>
+    </footer>
+
+    <!-- Script pour le menu mobile -->
+    <script src="script.js"></script>
+</body>
+</html>

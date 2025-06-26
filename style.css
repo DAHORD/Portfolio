@@ -1,0 +1,64 @@
+:root {
+    --color-primary-blue: #3B82F6;
+    --color-accent-violet: #8B5CF6;
+    --color-accent-rose: #EC4899;
+    --color-text-light: #F3F4F6;
+    --color-text-dark: #1F2937;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1F2937;
+    color: var(--color-text-light);
+}
+
+.nav-txt-grad {
+    color :rgba(230, 230, 230, 0.750);
+    font-size: 22px;
+}
+
+.nav-txt-grad:hover {
+    color : #ffffff;
+    background: linear-gradient(90deg, rgba(59, 131, 246, 0.5), rgb(139, 92, 246, 0.5), rgb(236, 72, 153, 0.5));
+    border-radius: 50% 20% / 10% 40%;;
+    transition: all 0.5s ease;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--color-primary-blue), var(--color-accent-violet), var(--color-accent-rose));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.btn-gradient {
+    background: linear-gradient(90deg, var(--color-primary-blue), var(--color-accent-violet));
+    transition: all 0.4s ease;
+}
+.btn-gradient:hover {
+    background: linear-gradient(90deg, var(--color-accent-violet), var(--color-accent-rose));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.social-icon {
+    transition: transform 0.2s ease-in-out;
+}
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: var(--color-accent-rose);
+}
+
+section {
+    padding: 4rem 0;
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 6rem 0;
+    }
+}
